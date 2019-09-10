@@ -1,0 +1,7 @@
+C:\Программирование\GB-CSharp-Level1-Lesson4\3_AdvenceLogin\bin\Debug\3_AdvenceLogin.exe.config
+C:\Программирование\GB-CSharp-Level1-Lesson4\3_AdvenceLogin\bin\Debug\3_AdvenceLogin.exe
+C:\Программирование\GB-CSharp-Level1-Lesson4\3_AdvenceLogin\bin\Debug\3_AdvenceLogin.pdb
+C:\Программирование\GB-CSharp-Level1-Lesson4\3_AdvenceLogin\obj\Debug\3_AdvenceLogin.csprojAssemblyReference.cache
+C:\Программирование\GB-CSharp-Level1-Lesson4\3_AdvenceLogin\obj\Debug\3_AdvenceLogin.csproj.CoreCompileInputs.cache
+C:\Программирование\GB-CSharp-Level1-Lesson4\3_AdvenceLogin\obj\Debug\3_AdvenceLogin.exe
+C:\Программирование\GB-CSharp-Level1-Lesson4\3_AdvenceLogin\obj\Debug\3_AdvenceLogin.pdb

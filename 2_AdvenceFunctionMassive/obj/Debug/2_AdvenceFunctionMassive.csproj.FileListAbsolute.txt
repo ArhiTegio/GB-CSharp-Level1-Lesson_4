@@ -1,0 +1,7 @@
+C:\Программирование\GB-CSharp-Level1-Lesson4\2_AdvenceFunctionMassive\bin\Debug\2_AdvenceFunctionMassive.exe.config
+C:\Программирование\GB-CSharp-Level1-Lesson4\2_AdvenceFunctionMassive\bin\Debug\2_AdvenceFunctionMassive.exe
+C:\Программирование\GB-CSharp-Level1-Lesson4\2_AdvenceFunctionMassive\bin\Debug\2_AdvenceFunctionMassive.pdb
+C:\Программирование\GB-CSharp-Level1-Lesson4\2_AdvenceFunctionMassive\obj\Debug\2_AdvenceFunctionMassive.csprojAssemblyReference.cache
+C:\Программирование\GB-CSharp-Level1-Lesson4\2_AdvenceFunctionMassive\obj\Debug\2_AdvenceFunctionMassive.csproj.CoreCompileInputs.cache
+C:\Программирование\GB-CSharp-Level1-Lesson4\2_AdvenceFunctionMassive\obj\Debug\2_AdvenceFunctionMassive.exe
+C:\Программирование\GB-CSharp-Level1-Lesson4\2_AdvenceFunctionMassive\obj\Debug\2_AdvenceFunctionMassive.pdb

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_BaseFunctionMassive", "1_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_AdvenceFunctionMassive", "2_AdvenceFunctionMassive\2_AdvenceFunctionMassive.csproj", "{0A2EA7AC-9E46-4CBD-92E0-21C9D69A4402}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_AdvenceLogin", "3_AdvenceLogin\3_AdvenceLogin.csproj", "{930F6C08-D95D-403E-8D78-764B6534F8C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_DoubleMassive", "4_DoubleMassive\4_DoubleMassive.csproj", "{A3879E67-7735-486B-A848-2A65927D84B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0A2EA7AC-9E46-4CBD-92E0-21C9D69A4402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A2EA7AC-9E46-4CBD-92E0-21C9D69A4402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A2EA7AC-9E46-4CBD-92E0-21C9D69A4402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{930F6C08-D95D-403E-8D78-764B6534F8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{930F6C08-D95D-403E-8D78-764B6534F8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{930F6C08-D95D-403E-8D78-764B6534F8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{930F6C08-D95D-403E-8D78-764B6534F8C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3879E67-7735-486B-A848-2A65927D84B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3879E67-7735-486B-A848-2A65927D84B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3879E67-7735-486B-A848-2A65927D84B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3879E67-7735-486B-A848-2A65927D84B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
