@@ -16,9 +16,9 @@ namespace _1_BaseFunctionMassive
             var q = new Questions();
             WriteLine("С# - Уровень 1. Задание 4.1");
             WriteLine("Кузнецов");
-            WriteLine("Дан целочисленный  массив  из 20 элементов.  Элементы  массива  могут принимать  целые  значения  от –10 000 до 10 000 включительно. " + Environment.NewLine +
-                "Заполнить случайными числами.  Написать программу, позволяющую найти и вывести количество пар элементов массива, в которых только одно число делится на 3. " + Environment.NewLine +
-                "В данной задаче под парой подразумевается два подряд идущих элемента массива. Например, для массива из пяти элементов: 6; 2; 9; –3; 6 ответ — 2.");
+            WriteLine("Дан целочисленный массив из 20 элементов. Элементы массива могут принимать целые значения от –10 000 до 10 000 включительно. " + Environment.NewLine +
+                      "Написать программу, позволяющую найти и вывести количество пар элементов массива, в которых хотя бы одно число делится на 3. " + Environment.NewLine +
+                      "В данной задаче под парой подразумевается два подряд идущих элемента массива. Например, для массива из пяти элементов: 6; 2; 9; –3; 6 – ответ: 4.");
             var t = new RArray<int>
                 (int.Parse(q.Question<int>("Укажите размер массива: ", arrayNumForOnlyNum)));
             ex.Print(t.NextRandomArrayValues().ToString(), PositionForRow.LeftEdge, Console.CursorTop + 1);
@@ -58,10 +58,10 @@ namespace _1_BaseFunctionMassive
             for (var i = 0; i < array.Length; ++i)
             {
                 oldValue = nextValue;
-                nextValue = (dynamic)r.Next(-10, 10);
+                nextValue = (dynamic)r.Next(-10000, 10000);
                 array[i] = nextValue;
 
-                if (i != 0 && (oldValue % (dynamic)3 == 0 ^ nextValue % (dynamic)3 == 0))
+                if (i != 0 && (oldValue % (dynamic)3 == 0 || nextValue % (dynamic)3 == 0))
                     listPair.Add(i - 1, Tuple.Create(oldValue, nextValue));                
             }
             return this;
@@ -85,12 +85,12 @@ namespace _1_BaseFunctionMassive
                 var b1 = listPair.TryGetValue(i, out var t1);
                 if (b1)
                 {
-                    if (value % (dynamic)3 == 0 ^ t1.Item2 % (dynamic)3 == 0)
+                    if (value % (dynamic)3 == 0 || t1.Item2 % (dynamic)3 == 0)
                         listPair[i] = Tuple.Create(value, t1.Item2);
                     else
                         listPair.Remove(i);
                 }
-                else if (array.Length > i + 1 && (value % (dynamic)3 == 0 ^ array[i + 1] % (dynamic)3 == 0))
+                else if (array.Length > i + 1 && (value % (dynamic)3 == 0 || array[i + 1] % (dynamic)3 == 0))
                         listPair.Add(i, Tuple.Create(value, array[i + 1]));
                 
 
@@ -99,12 +99,12 @@ namespace _1_BaseFunctionMassive
                     var b2 = listPair.TryGetValue(i - 1, out var t2);
                     if (b2)
                     {
-                        if (t2.Item1 % (dynamic)3 == 0 ^ value % (dynamic)3 == 0)
+                        if (t2.Item1 % (dynamic)3 == 0 || value % (dynamic)3 == 0)
                             listPair[i - 1] = Tuple.Create(t2.Item1, value);
                         else
                             listPair.Remove(i - 1);
                     }
-                    else if (i - 1 >= 0 && (array[i - 1] % (dynamic)3 == 0 ^ value % (dynamic)3 == 0))
+                    else if (i - 1 >= 0 && (array[i - 1] % (dynamic)3 == 0 || value % (dynamic)3 == 0))
                         listPair.Add(i - 1, Tuple.Create(array[i], value));
                 }
             }
@@ -131,7 +131,6 @@ namespace _1_BaseFunctionMassive
             return text.ToString();
         }
     }
-
 
     /// <summary>
     /// Класс запроса данных у пользователя
@@ -189,7 +188,6 @@ namespace _1_BaseFunctionMassive
             return textAnswer.ToString();
         }
     }
-
 
     /// <summary>
     /// Класс расширения возможности консольного приложения
