@@ -1,0 +1,7 @@
+C:\Программирование\GB-CSharp-Level1-Lesson4\4_DoubleMassive\bin\Debug\4_DoubleMassive.exe.config
+C:\Программирование\GB-CSharp-Level1-Lesson4\4_DoubleMassive\bin\Debug\4_DoubleMassive.exe
+C:\Программирование\GB-CSharp-Level1-Lesson4\4_DoubleMassive\bin\Debug\4_DoubleMassive.pdb
+C:\Программирование\GB-CSharp-Level1-Lesson4\4_DoubleMassive\obj\Debug\4_DoubleMassive.csprojAssemblyReference.cache
+C:\Программирование\GB-CSharp-Level1-Lesson4\4_DoubleMassive\obj\Debug\4_DoubleMassive.csproj.CoreCompileInputs.cache
+C:\Программирование\GB-CSharp-Level1-Lesson4\4_DoubleMassive\obj\Debug\4_DoubleMassive.exe
+C:\Программирование\GB-CSharp-Level1-Lesson4\4_DoubleMassive\obj\Debug\4_DoubleMassive.pdb

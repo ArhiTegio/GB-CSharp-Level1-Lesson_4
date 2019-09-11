@@ -71,19 +71,25 @@ namespace _3_AdvenceLogin
             }
         }
     }
-
+    /// <summary>
+    /// Загрузчик аккаунтов
+    /// </summary>
     struct Account
     {
         public string Login;
         public int Password;
 
-        public Account(string text)
+        /// <summary>
+        /// Загрузить параметры пользователя
+        /// </summary>
+        /// <param name="file"></param>
+        public Account(string file)
         {
             Login = "";
             Password = 0;
-            if (File.Exists(text))
+            if (File.Exists(file))
             {
-                StreamReader sr = new StreamReader(text);
+                StreamReader sr = new StreamReader(file);
                 try
                 {
                     var array = sr.ReadLine().Split(' ');

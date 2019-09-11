@@ -30,7 +30,7 @@ namespace _2_AdvenceFunctionMassive
             ex.Print($"Инвентирование элементов массива: {array.Inverse()}", PositionForRow.LeftEdge, CursorTop + 1);
             ex.Print($"Количество максимальных элементов: {array.MaxCount()}", PositionForRow.LeftEdge, CursorTop + 1);
 
-            array = new RArray<int>(20).NextRandomArrayValues().WriteMassiveInFaile(@"data.txt");            
+            array = new RArray<int>(20).NextRandomArrayValues().WriteMassiveInFile(@"data.txt");            
             ex.Print($"Одномерный массив записанный в файл: {array}", PositionForRow.LeftEdge, CursorTop + 1);
             array = new RArray<int>(7, 3);
             ex.Print($"Одномерный массив измененный: {array}", PositionForRow.LeftEdge, CursorTop + 1);
@@ -41,19 +41,30 @@ namespace _2_AdvenceFunctionMassive
         }
     }
 
+    /// <summary>
+    /// Одномерный массив
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     struct RArray<T> where T : struct, IComparable<T>
     {
         T[] array;  // он приватный
         Dictionary<int, Tuple<T, T>> listPair;
 
+        /// <summary>
+        /// Инициализировать одномерного массив заданной длинны
+        /// </summary>
+        /// <param name="n"></param>
         public RArray(int n)
         {
             array = new T[(dynamic)n];
             listPair = new Dictionary<int, Tuple<T, T>>();
-
-
         }
 
+        /// <summary>
+        /// Инициализация одномерного массива заданной длины с заполнением случайными числами с определенным шагом
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="step"></param>
         public RArray(int n, int step)
         {
             array = new T[(dynamic)n];
@@ -62,6 +73,10 @@ namespace _2_AdvenceFunctionMassive
             NextRandomArrayValues(step);
         }
 
+        /// <summary>
+        /// Считать массив из файла
+        /// </summary>
+        /// <param name="filename"></param>
         public RArray(string filename)
         {
             //@"data.txt"
@@ -86,7 +101,12 @@ namespace _2_AdvenceFunctionMassive
             }
         }
 
-        public RArray<T> WriteMassiveInFaile(string filename)
+        /// <summary>
+        /// Загрузить массив в файл
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <returns></returns>
+        public RArray<T> WriteMassiveInFile(string filename)
         {
             StreamWriter sr = new StreamWriter(filename);
             try
@@ -112,6 +132,11 @@ namespace _2_AdvenceFunctionMassive
             return this;
         }
 
+        /// <summary>
+        /// Заполнить массив случайными числами
+        /// </summary>
+        /// <param name="step"></param>
+        /// <returns></returns>
         public RArray<T> NextRandomArrayValues(int step = 1)
         {
             var oldValue = new T();
@@ -133,10 +158,21 @@ namespace _2_AdvenceFunctionMassive
             return this;
         }
 
+        /// <summary>
+        /// Получить массив
+        /// </summary>
         public T[] GetArray => array;
 
+        /// <summary>
+        /// Сумма массива
+        /// </summary>
+        /// <returns></returns>
         public T Sum() => array.Aggregate<T>((x, y) => (dynamic)x + (dynamic)y);
 
+        /// <summary>
+        /// преобразовать значения в массиве с противоположным знаком
+        /// </summary>
+        /// <returns></returns>
         public RArray<T> Inverse()
         {
             array = array
@@ -145,6 +181,11 @@ namespace _2_AdvenceFunctionMassive
             return this;
         }
 
+        /// <summary>
+        /// Умножить все элементы в массиве на заданное значение значение
+        /// </summary>
+        /// <param name="m"></param>
+        /// <returns></returns>
         public RArray<T> Multi(int m)
         {
             array = array
@@ -153,6 +194,10 @@ namespace _2_AdvenceFunctionMassive
             return this;
         }
 
+        /// <summary>
+        /// Позиция максимального значения
+        /// </summary>
+        /// <returns></returns>
         public int MaxCount()
         {
             var m = array.Max<T>();
@@ -161,9 +206,17 @@ namespace _2_AdvenceFunctionMassive
                 .Count();
         }
 
+        /// <summary>
+        /// Получить перечисление пар хотябы одно из значения которой делиться на три
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<int, Tuple<T, T>> GetPair() => listPair;
 
-        // либо создаем индексируемое свойство
+        /// <summary>
+        /// Индексатор массива
+        /// </summary>
+        /// <param name="i"></param>
+        /// <returns></returns>
         public T this[int i]
         {
             get { return array[i]; }

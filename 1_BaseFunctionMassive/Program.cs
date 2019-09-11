@@ -38,18 +38,29 @@ namespace _1_BaseFunctionMassive
         }
     }
 
+    /// <summary>
+    /// Одномерный массив 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     struct RArray<T> where T: struct, IComparable<T>
     {
         T[] array;  // он приватный
         Dictionary<int, Tuple<T, T>> listPair;
 
-
+        /// <summary>
+        /// Инициализировать одномерный массив заданной длины
+        /// </summary>
+        /// <param name="n"></param>
         public RArray(int n)
         {
             array = new T[(dynamic)n];
             listPair = new Dictionary<int, Tuple<T, T>>();
         }
 
+        /// <summary>
+        /// Заполнить массив случайными значениями
+        /// </summary>
+        /// <returns></returns>
         public RArray<T> NextRandomArrayValues()
         {
             var oldValue = new T();
@@ -66,7 +77,11 @@ namespace _1_BaseFunctionMassive
             }
             return this;
         }
-        
+
+        /// <summary>
+        /// Получить перечисление пар хотябы одно из значения которой делиться на три
+        /// </summary>
+        /// <returns></returns>
         public Dictionary<int, Tuple<T, T>> GetPair() => listPair;
 
         // либо создаем индексируемое свойство
