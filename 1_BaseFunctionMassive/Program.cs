@@ -44,7 +44,7 @@ namespace _1_BaseFunctionMassive
     /// <typeparam name="T"></typeparam>
     struct RArray<T> where T: struct, IComparable<T>
     {
-        T[] array;  // он приватный
+        T[] array;
         Dictionary<int, Tuple<T, T>> listPair;
 
         /// <summary>
@@ -79,12 +79,16 @@ namespace _1_BaseFunctionMassive
         }
 
         /// <summary>
-        /// Получить перечисление пар хотябы одно из значения которой делиться на три
+        /// Получить перечисление пар, хотя бы одно из значений которое делиться на три
         /// </summary>
         /// <returns></returns>
         public Dictionary<int, Tuple<T, T>> GetPair() => listPair;
 
-        // либо создаем индексируемое свойство
+      /// <summary>
+      /// Индексатор
+      /// </summary>
+      /// <param name="i"></param>
+      /// <returns></returns>
         public T this[int i]
         {
             get { return array[i]; }
